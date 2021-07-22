@@ -1,0 +1,48 @@
+body {
+    background-image: url('/images/register.jpg');
+}
+
+.back {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+    position: relative;
+    color: #FFF;
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+    font-size: larger;
+    padding-top: 1%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    margin-left: 50%;
+}
+
+#submit {
+    margin-left: 30%;
+}
+
+.message {
+    width: 100%;
+    color: red;
+    font-size: large;
+    text-align: center;
+    margin-left: 0%;
+}

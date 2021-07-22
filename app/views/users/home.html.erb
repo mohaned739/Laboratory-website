@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Automated CBC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <% if @user.status==false%>
+        <li class="nav-item">
+          <a class="nav-link" href="/reports">Reports</a>
+        </li>
+        <% else%>
+        <li class="nav-item">
+        <a class="nav-link" href="/addreport">Add Report</a>
+        </li>
+        <% end %>
+        <form action="/logout" method="get">
+        <button class="btn btn-success" type="submit">Logout</button>
+        </form>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="back"></div>
+
+
+<div class="left">
+<h2>What is cbc test?</h2>
+<p>A complete blood count (CBC) is a blood test used to evaluate your overall health and detect a wide range of disorders, including anemia, infection and leukemia.
+</p>
+<p>A complete blood count test measures several components and features of your blood, including:</p>
+<ul>
+<li>Red blood cells, which carry oxygen</li>
+<li>White blood cells, which fight infection</li>
+<li>Hemoglobin, the oxygen-carrying protein in red blood cells</li>
+<li>Hematocrit, the proportion of red blood cells to the fluid component, or plasma, in your blood</li>
+<li>Platelets, which help with blood clotting</li>
+<li>Abnormal increases or decreases in cell counts as revealed in a complete blood count may indicate that you have an underlying medical condition that calls for further evaluation.</li>
+</ul>
+</div>
+
+<div class="right">
+<h2>Why is cbc test important?</h2>
+<p>A complete blood count is a common blood test that is done for a variety of reasons:</p>
+<ul>
+<li><b>To review your overall health.</b> Your doctor may recommend a complete blood count as part of a routine medical examination to monitor your general health and to screen for a variety of disorders, such as anemia or leukemia.
+<li><b>To diagnose a medical condition.</b> Your doctor may suggest a complete blood count if you are experiencing weakness, fatigue, fever, inflammation, bruising or bleeding. A complete blood count may help diagnose the cause of these signs and symptoms. If your doctor suspects you have an infection, the test can also help confirm that diagnosis.
+<li><b>To monitor a medical condition.</b> If you have been diagnosed with a blood disorder that affects blood cell counts, your doctor may use complete blood counts to monitor your condition.
+<li><b>To monitor medical treatment.</b> A complete blood count may be used to monitor your health if you are taking medications that may affect blood cell counts.
+</ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

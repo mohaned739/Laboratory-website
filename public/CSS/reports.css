@@ -1,0 +1,49 @@
+body {
+    background-image: url('/images/blood.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    position: fixed;
+}
+
+.title {
+    color: #FFF;
+    text-decoration: underline;
+    letter-spacing: 8px;
+    margin-top: 3%;
+}
+
+.report {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    color: #FFF;
+    word-wrap: break-word;
+}
+
+hr {
+    border-top: 4px solid #FFF;
+    width: 90%;
+}
+
+#doctor {
+    text-align: left;
+}
+
+.message {
+    color: #FFF;
+    font-size: x-large;
+    margin-top: 20%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/register.css">
+</head>
+
+<body>
+<div class="back"></div>
+<% if flash[:alert] %>
+    <div class="alert alert-danger" role="alert"><%= flash[:alert] %></div>
+  <% end %>
+<form action="/create" method="post">
+<div id="left">
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" placeholder="Ex. Mohaned Mohamed" required><br>
+  <label for="email">Email</label><br>
+  <input type="email" id="email" name="email" placeholder="Ex. example@email.com" required aria-describedby="emailHelp"><br>
+  <div id="emailHelp" class="form-text" style="color:#CCC;">We will never share your email with anyone else.</div>
+  <label for="NID">National ID</label><br>
+  <input type="number" id="NID" name="NID" placeholder="Ex. 299###########" required required aria-describedby="NIDHelp"><br>
+  <div id="NIDHelp" class="form-text" style="color:#CCC;">National ID must be 14 digits</div>
+  </div>
+  <div id="right">
+  <label for="phone">Phone Number</label><br>
+  <input type="number" id="phone" name="phone" placeholder="Ex. 01########" required aria-describedby="phoneHelp"><br>
+  <div id="phoneHelp" class="form-text" style="color:#CCC;">Phone number must be 11 digits</div>
+  <label for="pass">Password</label><br>
+  <input type="password" id="pass" name="pass" required aria-describedby="passHelp"><br>
+  <div id="passHelp" class="form-text" style="color:#CCC;">Password must be at least of size 8</div>
+  <label for="cpass">Confirm Password</label><br>
+  <input type="password" id="cpass" name="cpass" required><br><br>
+  </div><br>
+  <input type="submit" value="Register" class="btn btn-danger" id="submit">
+  <div class="message"></div>
+  </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
